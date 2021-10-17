@@ -16,7 +16,7 @@ if __name__ == "__main__":
                 inp += line.strip()
     else:
         inp = args.string
-    res = inp
+    res = inp.replace(' ', '')
     for key in d:
         res = res.replace(key, d[key])
     res = " ".join(res)
