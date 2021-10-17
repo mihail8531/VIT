@@ -3,11 +3,11 @@ import argparse
 d = {">": "0", "<": "1", "+": "2", "-": "3", ".": "4", ",": "5", "[": "6", "]": "7"}
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Утилита для перевода Brainfuck программ в файл для ОЗУ logisim')
+    parser = argparse.ArgumentParser(description='Утилита для перевода Brainfuck программ в образ ОЗУ logisim')
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-f", "--file", default=None, type=str, help="Считать Brainfuck код из файла")
     group.add_argument("-s", "--string", default=None, type=str, help="Считать Brainfuck код одной строкой")
-    parser.add_argument("-o", "--out", default=None, type=str, help="Записать программу в файл")
+    parser.add_argument("-o", "--out", default=None, type=str, help="Записать образ в файл")
     args = parser.parse_args()
     inp = ""
     if args.file is not None:
